@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 function Setting() {
   const [computerInfo, setComputerInfo] = useState({});
   useEffect(() => {
-    Axios.get("https://quiet-beyond-90527.herokuapp.com/computerInfo")
+    Axios.get("https://louis-darius-covid19-server.herokuapp.com/computerInfo")
       .then((response) => setComputerInfo(response.data))
       .catch((error) => console.log(error));
   }, []);
