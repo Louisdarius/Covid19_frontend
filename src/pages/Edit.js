@@ -15,7 +15,8 @@ function Edit(props) {
 
   useEffect(() => {
     Axios.get(
-      "https://quiet-beyond-90527.herokuapp.com/covid/" + props.match.params.id
+      "https://louis-darius-covid19-server.herokuapp.com/covid/" +
+        props.match.params.id
     )
       .then((response) => {
         setCountry(response.data.country);
@@ -60,7 +61,7 @@ function Edit(props) {
       date: covid.date,
     };
     Axios.put(
-      "https://quiet-beyond-90527.herokuapp.com/update/" +
+      "https://louis-darius-covid19-server.herokuapp.com/update/" +
         props.match.params.id,
       covid19
     )

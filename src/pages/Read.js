@@ -17,7 +17,7 @@ function Read() {
   );
 
   function getData() {
-    Axios.get("https://quiet-beyond-90527.herokuapp.com/read")
+    Axios.get("https://louis-darius-covid19-server.herokuapp.com/read")
       .then((response) => setCovid19Records(response.data))
       .catch((err) => console.log(err));
   }
@@ -27,7 +27,9 @@ function Read() {
       "Are you sure you want to delete this record?"
     );
     if (confirmation === true) {
-      Axios.delete("https://quiet-beyond-90527.herokuapp.com/delete/" + id)
+      Axios.delete(
+        "https://louis-darius-covid19-server.herokuapp.com/delete/" + id
+      )
         .then((response) => {
           console.log(response.data);
           alert(`Successfully deleted:
